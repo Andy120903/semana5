@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>editar</title>
+</head>
+<body>
+<h2>Editar Estudiante</h2>
+
+<form id="form2" method="post" th:action="@{/actualizar}" th:object="${estudiante}">
+
+<p> 
+	<input type="number" th:field ="*{idestudiante}" readonly="readonly"> 
+</p>
+<p> 
+	<input type="text" th:field ="*{nombre}" placeholder="Ingrese nombre" required="required"> 
+</p>
+<p> 
+	<input type="text" th:field ="*{apellido}" placeholder="Ingrese apellido" required="required"> 
+</p>
+<p> 
+	<input type="text" th:field ="*{telefono}" placeholder="Ingrese telefono"> 
+</p>
+<p> 
+	<input type="text" th:field ="*{correo}" placeholder="Ingrese correo"> 
+</p>
+
+<p> 
+<input type="submit" value="Actualizar">
+</p>
+</form>
+
+
+
+</body>
+</html>
